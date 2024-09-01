@@ -1,0 +1,14 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+npx lint-staged
+npx prettier --write .
+
+
+# lint-staged is a tool that runs linters (like ESLint or Prettier)
+# on staged Git files (files that are marked to be committed).
+# The purpose of running lint-staged is to ensure that code is linted
+# and formatted correctly before it is committed to the repository.
+
+
+# npx prettier --write . => Format Files Automatically
